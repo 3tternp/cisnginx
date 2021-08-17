@@ -72,8 +72,6 @@ grep location /etc/nginx/nginx.conf >> $name
 echo "Ensure the NGINX reverse proxy does not enable information disclosure (Scored)" >> $name
 grep proxy_hide_header /etc/nginx/nginx.conf >> $name
 echo "Logging" >> $name 
-echo "Ensure detailed logging is enabled (Not Scored)" >> $name
-cat /etc/nginx/nginx.conf >> $name
 echo "Ensure access logging is enabled (Scored)" >> $name
 grep -ir access_log /etc/nginx >> $name
 echo "Ensure error logging is enabled and set to the info logging level (Scored)" >> $name
